@@ -1,10 +1,7 @@
+link = "https://www.codewars.com/kata/541c8630095125aba6000c00"
+
+
 def digital_root(n):
     while len(str(n)) > 1:
         n = sum([int(i) for i in list(str(n))])
     return n
-
-
-digital_root(125)
-digital_root(12532)
-digital_root(9975)
-digital_root(1)

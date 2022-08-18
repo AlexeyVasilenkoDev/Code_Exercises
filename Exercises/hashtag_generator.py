@@ -8,4 +8,3 @@ def generate_hashtag(phrase: str):
     if len(result) >= 140 or result == "#":
         return False
     return result
-
