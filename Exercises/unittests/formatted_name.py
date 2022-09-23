@@ -32,3 +32,6 @@ class TestFormattedName(unittest.TestCase):
     def test_middle_name(self):
         self.assertEqual(formatted_name(self.first_name, self.last_name, '     '), 'Mark       Jones')
 
+
+if __name__ == "__main__":
+    unittest.main()

@@ -39,3 +39,7 @@ class TestFibonacci(unittest.TestCase):
 
     def test_invalid_parameter(self):
         self.assertRaises(ValueError, self.f, 'Hello')
+
+
+if __name__ == "__main__":
+    unittest.main()
