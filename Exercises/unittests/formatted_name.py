@@ -21,7 +21,7 @@ class TestFormattedName(unittest.TestCase):
         with self.assertRaises(TypeError):
             formatted_name(self.first_name)
 
-    def test_extre_parameter(self):
+    def test_extra_parameter(self):
         with self.assertRaises(TypeError):
             formatted_name(self.first_name, self.last_name, 'David', 'Steve')
 
