@@ -1,3 +1,6 @@
+import unittest
+
+
 class Fibonacci:
     def __init__(self):
         self.cache = [0, 1]
@@ -16,3 +19,23 @@ class Fibonacci:
             self.cache.append(fib_number)
 
         return self.cache[n]
+
+
+class TestFibonacci(unittest.TestCase):
+    def setUp(self):
+        self.f = Fibonacci()
+
+    def test_zero(self):
+        self.assertEqual(self.f(0), 0)
+
+    def test_negative(self):
+        self.assertRaises(ValueError, self.f, -10)
+
+    def test_biggest_number_allowed(self):
+        self.assertEqual(self.f(485), 102216385354134324778078911974689347564945335253989394162085272183728832930964492342791374522266860485)  # biggest allowed value without RecursionError
+
+    def test_too_big_number(self):
+        self.assertRaises(RecursionError, self.f, 100000000)
+
+    def test_invalid_parameter(self):
+        self.assertRaises(ValueError, self.f, 'Hello')
