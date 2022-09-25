@@ -22,23 +22,22 @@ class Fibonacci:
 
 
 class TestFibonacci(unittest.TestCase):
-    def setUp(self):
-        self.f = Fibonacci()
 
     def test_zero(self):
-        self.assertEqual(self.f(0), 0)
+        self.assertEqual(Fibonacci()(0), 0)
 
     def test_negative(self):
-        self.assertRaises(ValueError, self.f, -10)
+        self.assertRaises(ValueError, Fibonacci(), -10)
 
     def test_biggest_number_allowed(self):
-        self.assertEqual(self.f(485), 102216385354134324778078911974689347564945335253989394162085272183728832930964492342791374522266860485)  # biggest allowed value without RecursionError
+        """Biggest allowed value without RecursionError"""
+        self.assertEqual(Fibonacci()(485), 102216385354134324778078911974689347564945335253989394162085272183728832930964492342791374522266860485)
 
     def test_too_big_number(self):
-        self.assertRaises(RecursionError, self.f, 100000000)
+        self.assertRaises(RecursionError, Fibonacci(), 100000000)
 
     def test_invalid_parameter(self):
-        self.assertRaises(ValueError, self.f, 'Hello')
+        self.assertRaises(ValueError, Fibonacci(), 'Hello')
 
 
 if __name__ == "__main__":
