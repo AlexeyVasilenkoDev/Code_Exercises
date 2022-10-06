@@ -3,7 +3,6 @@ from random_word import RandomWords
 
 def unique_words_generator(number_of_words):
     words_limit = 10000
-    list_of_words = ['a', 'b', 'c', 'd', 'e']
     assert number_of_words <= words_limit
     word = RandomWords()
     list_of_words = set()
