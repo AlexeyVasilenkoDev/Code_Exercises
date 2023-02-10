@@ -8,3 +8,6 @@ def mirror(text):
     for i in reverse_words:
         word += "*" + " " + i + " " * (mirror_width - len(i) - 3) + "*" + "\n"
     return word + '*' * mirror_width
+
+
+print(mirror("Hello World"))
